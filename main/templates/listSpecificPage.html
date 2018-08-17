@@ -1,5 +1,6 @@
 <head>
     <title>Uzu_InaJJang - uzuBoard</title>
+    <h1>우주 재밌고 슬프고 웃기고 감동적인 이야기가 넘치는 우주게시판</h1>
 </head>
 <body>
 <table cellspacing=1 width=700 border=0>
@@ -30,7 +31,7 @@
             <td width=100><p align=center>{{ boardRow.name }}</p></td>
             <td width=320>
                 <p align=center>
-                    <a> href="/viewWork?memo_id={{ boardRow.id }}&current_page={{ current_page }}&searchStr=None" title="{{ boardRow.memo}}"</a>
+                    <a> href="/viewWork?memo_id={{ boardRow.id }}&current_page={{ current_page }}&searchStr=None" title="{{ boardRow.contents}}"</a>
                         {{ boardRow.subject }}
                 </p>
             </td>
