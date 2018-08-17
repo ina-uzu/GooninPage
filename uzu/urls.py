@@ -19,7 +19,7 @@ from django.conf.urls import include
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-
-	#UZU
-	url(r'^main/', include('main.urls')),
+    url(r'^$', views.home),
+    #UZU
+    url(r'^main/', include('main.urls')),
 ]
