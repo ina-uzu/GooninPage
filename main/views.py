@@ -17,7 +17,8 @@ def home(request):
     totalCnt = DjangoBoard.objects.all().count()
 
     pagingHelperIns = pagingHelper()
-    totalPageList = pagingHelper.getTotalPageList(totalCnt,rowsPerPage)
+
+    totalPageList = pagingHelper.getTotalPageList(pagingHelperIns,totalCnt,rowsPerPage)
     print("totalPageList ", totalPageList)
     return render_to_response('listSpecificPage.html', {'boardList':boardList, 'totalCnt': totalCnt ,
                                                         'current_page':current_page, 'totalPageList':totalPageList})
