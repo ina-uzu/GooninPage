@@ -11,7 +11,7 @@ def index(request):
 
 
 rowsPerPage=5
-def home(request):
+def show_post_list(request):
     boardList = DjangoBoard.objects.order_by('-id')[0:5]
     current_page = 1
     totalCnt = DjangoBoard.objects.all().count()
@@ -20,7 +20,7 @@ def home(request):
 
     totalPageList = pagingHelper.getTotalPageList(pagingHelperIns,totalCnt,rowsPerPage)
     print("totalPageList ", totalPageList)
-    return render_to_response('listSpecificPage.html', {'boardList':boardList, 'totalCnt': totalCnt ,
+    return render_to_response('boardMain.html', {'boardList':boardList, 'totalCnt': totalCnt ,
                                                         'current_page':current_page, 'totalPageList':totalPageList})
 
 class pagingHelper:
@@ -42,3 +42,6 @@ class pagingHelper:
     def __init__(self):
         self.total_pages = 0
         self.totalPageList = 0
+
+def show_write_form(request):
+    return render_to_response('boardWrite.html')
