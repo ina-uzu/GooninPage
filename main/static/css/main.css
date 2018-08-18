@@ -5,11 +5,10 @@ h1{
 
 p{
   color: #555555;
-  font-size:17px;
+  font-size:20px;
   font-style: italic;
   text-align: center;
 }
-
 
 input.MyButton {
   width: 300px;
