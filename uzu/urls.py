@@ -20,13 +20,11 @@ from main import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^board-main/', views.show_post_list, name='index'),
-
-    #UZU
-    #    url(r'^main/', include('main.urls')),
-
     url(r'^$', include('main.urls')),
 
+    #Board-list
+    url(r'^board-main/', views.show_post_list),
+
     #Board_write
-    url(r'^show_write_form/$', views.show_write_form),
+    url(r'^board-write/', views.show_write_form),
 ]
