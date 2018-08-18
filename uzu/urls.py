@@ -20,7 +20,7 @@ from main import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^board-main/', views.show_post_list(), name='index'),
+    url(r'^board-main/', views.show_post_list, name='index'),
 
     #UZU
     #    url(r'^main/', include('main.urls')),
