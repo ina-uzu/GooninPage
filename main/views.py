@@ -48,7 +48,7 @@ class pagingHelper:
 
 def show_write_form(request):
     template = get_template('boardWrite.html')
-    context = Context({})
+    context = Context({'name':'ina'})
 
     #return render_to_response('boardWrite.html')
     return HttpResponse(template.render(context))
