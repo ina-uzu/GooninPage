@@ -29,5 +29,5 @@ urlpatterns = [
     url(r'^board/write/', views.show_write_form, name='post_write'),
 
     #Board read
-    url(r'^board/read/(?P<pk>\d+)/$', views.show_read_form, name='post_read'),
+    url(r'^board/read/(?P<pk>\d+)/', views.show_read_form, name='post_read'),
 ]
