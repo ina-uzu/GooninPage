@@ -1,7 +1,8 @@
 @charset "utf-8"
 
-a {color: #555555;}
-a:hover {color: #FFAAA6;}
+a:hover{
+color: #FFAAA6;
+}
 
 h1{
     text-align: center;
