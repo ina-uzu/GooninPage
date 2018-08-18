@@ -3,6 +3,11 @@
 a {color: #555555;}
 a:hover {color: #FFBBA5}
 
+h1{
+    background-color:#FFBBA5;
+    color:#FFFFFF;
+}
+
 
 .test{
 	border : solid 1px black;

@@ -2,5 +2,9 @@
 
 a {color: #555555;}
 a:hover {color: #FFBBA5;}
-background-color:#FFBBA5;
+
+h1{
+    background-color:#FFBBA5;
+    color:#FFFFFF;
+}
 
