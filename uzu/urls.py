@@ -27,4 +27,7 @@ urlpatterns = [
 
     #Board_write
     url(r'^board-write/', views.show_write_form),
+
+    #Board read
+    url(r'^(?P<pk>\d+)/$', views.show_read_form),
 ]

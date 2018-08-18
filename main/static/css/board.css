@@ -10,6 +10,15 @@ h1{
     color:#FFAAA6;
 }
 
+.post_subtitle{
+   text-align:center;
+   font-weight: bold;
+   font-size: 80%;
+}
+.post_contents{
+    color:#55555;
+}
+
 .main_table{
   background-color: #FFEEEE;
   border-radius: 10px;

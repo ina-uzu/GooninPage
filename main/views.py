@@ -49,6 +49,12 @@ class pagingHelper:
 def show_write_form(request):
     template = get_template('boardWrite.html')
     context = {'name':'ina'}
-
     #return render_to_response('boardWrite.html')
     return HttpResponse(template.render(context))
+
+
+def show_read_form(request, pk):
+    post = DjangoBoard.objects.get(pk=pk)
+    return render(request, 'boardRead.html',{
+        'post':post
+    })
