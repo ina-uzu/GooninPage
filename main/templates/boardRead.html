@@ -10,13 +10,15 @@
 
 <body>
 <center>
-    <p class="post_subtitle"> 글쓴이는 바로, '{{ post.name }}' </br>
-        언제냐면 바로, {{ post.created_date }} </br>
-    </p>
-</center>
+	<p class="post_subtitle"> 글쓴이는 바로, '{{ post.name }}' </br>
+       	언제냐면 바로, {{ post.created_date }} </br>
+   	</p>
 
-    <p class="post_contents">
-        {{ post.contents }}
-    </p>
+	<table class ="main_table" width =800 >
+	<tr><td>
+    		<p class="post_contents">{{ post.contents }} </p>
+	</td></tr>
+   	 </table>
+</center>
 </body>
 </html>

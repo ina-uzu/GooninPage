@@ -34,7 +34,7 @@
             <td width=100><p align=center>{{ boardRow.name }}</p></td>
             <td width=320>
                 <p align=center>
-                    <a href="/{{ boardRow.pk }}/">{{ boardRow.subject }}</a>
+                    <a href="http://34.220.143.60:8000/board-read/{{ boardRow.pk }}/">{{ boardRow.subject }}</a>
                 </p>
             </td>
             <td width=100><p align=center>{{ boardRow.created_date }}</p></td>
@@ -71,7 +71,7 @@
 <table width=700>
     <tr>
         <td>
-            <input class="MyButton" type=button value="우주글쓰기"  OnClick="window.location.href='http://34.220.143.60:8000/board-main/'" >
+            <input class="MyButton" type=button value="우주글쓰기"  OnClick="window.location.href='http://34.220.143.60:8000/board-write/'" >
         </td>
 
         <td>
