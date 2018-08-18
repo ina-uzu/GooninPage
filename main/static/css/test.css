@@ -1,3 +1,8 @@
+@charset "utf-8"
+
+a {color: #555555;}
+a:hover {color: #FFBBA5}
+
 
 .test{
 	border : solid 1px black;
@@ -5,6 +10,3 @@
 	height : 100px;
 }
 
-h1 a{
-    color: #FFBBA6;
-}
