@@ -8,6 +8,14 @@
   <title>Uzu_write</title>
 </head>
 
+<form method="post" action="/add/">
+	{% csrf_token %}
+	<p><label for="title">제목</label><input type="text" id="title" name="title" value="" /></p>
+	<p><textarea id="contents" name="contents"></textarea></p>
+	<p><input type="submit" value="등록쟝구" /></p>
+</form>
+
+<!--
 <body>
 <center> Hello, '{{ name }}' </center>
   <table width=700>
@@ -20,4 +28,6 @@
       </tr>
   </table>
 </body>
+-->
+
 </html>

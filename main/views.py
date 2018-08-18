@@ -5,7 +5,7 @@ from django.shortcuts import render, render_to_response
 from django.http import HttpResponse
 from django.template import Context
 from django.template.loader import get_template
-
+from django.views.decorators.csrf import csrf_exempt
 from main.models import DjangoBoard
 
 
@@ -47,11 +47,17 @@ class pagingHelper:
         self.totalPageList = 0
 
 def show_write_form(request):
-    template = get_template('boardWrite.html')
-    context = {'name':'ina'}
+    page_title = 'Write a post'
+    
+#    template = get_template('boardWrite.html')
+#    context = {
+#	'page_title': page_title    }
 
-    return HttpResponse(template.render(context))
+    return render(request, 'boardWrite.html',{ 'page_title' :page_title} )
 
+def add_post(request):
+    entry_title = request.POST['title']
+    return HttpResponse('hello %s' % entry_title)
 
 def show_read_form(request, pk):
     post = DjangoBoard.objects.get(pk=pk)
