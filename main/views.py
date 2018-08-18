@@ -3,6 +3,9 @@
 from __future__ import unicode_literals
 from django.shortcuts import render, render_to_response
 from django.http import HttpResponse
+from django.template import Context
+from django.template.loader import get_template
+
 from main.models import DjangoBoard
 
 
@@ -44,4 +47,8 @@ class pagingHelper:
         self.totalPageList = 0
 
 def show_write_form(request):
-    return render_to_response('boardWrite.html')
+    template = get_template('boardWrite.html')
+    context = Context({})
+
+    #return render_to_response('boardWrite.html')
+    return HttpResponse(template.render(context))
