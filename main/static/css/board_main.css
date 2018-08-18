@@ -1,5 +1,12 @@
 @charset "utf-8"
 
 a {color: #555555;}
-a:hover {color: #FFBBA5}
+a:hover {color: #FFBBA5;}
 
+.title{
+    color: #666;
+    font-size : 15px;
+}
+.background{
+    background-color:#FFBBA5;
+}
