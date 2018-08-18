@@ -1,11 +1,34 @@
 @charset "utf-8"
 
 a {color: #555555;}
-a:hover {color: #FFBBA5;}
+a:hover {color: #FFAAA6;}
 
 h1{
     text-align: center;
-    background-color:#FFBBA5;
-    color:#FFFFFF;
+    font-weight: bold;
+    background-color:#FFF;
+    color:#FFAAA6;
 }
 
+.main_table{
+  border-radius: 10px;
+  border: 1px solid #FFF;
+}
+
+input.MyButton {
+  width: 100px;
+  padding: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 80%;
+  background: #FFAAA6;
+  color: #fff;
+  border: 1px solid #FFAAA6;
+  border-radius: 10px;
+}
+
+input.MyButton:hover {
+  color: #FFF;
+  background: #ACE7FF;
+  border: 1px solid #fff;
+}

@@ -5,9 +5,15 @@ h1{
 
 p{
   color: #555555;
-  font-size:20px;
+  font-size:17px;
   font-style: italic;
   text-align: center;
+}
+
+button{
+  background-color: #FFAAA6;
+  color: #ffffff;
+  font-size: 20px;
 }
 
 input.MyButton {
@@ -24,7 +30,6 @@ input.MyButton {
 
 input.MyButton:hover {
   color: #FFF;
-  background: #3366CC;
+  background: #ACE7FF;
   border: 1px solid #fff;
 }
-
