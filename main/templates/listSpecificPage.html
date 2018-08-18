@@ -3,7 +3,9 @@
     <link rel="stylesheet" href="/static/css/board_main.css" type = "text/css">
     <h1>우주 재밌고 슬프고 웃기고 감동적인 이야기가 넘치는 우주게시판</h1>
 </head>
+
 <body>
+<center>
 <table cellspacing=0 width=700 border=0>
     <tr>
         <td>총 게시물이 몇개야!? {{ totalCnt }}</td>
@@ -12,7 +14,7 @@
     </tr>
 </table>
 
-<table cellspacing=0 width=700 border=1>
+<table class="main_table" cellspacing=0 width=700 border=1>
     <tr>
         <td width=50><p align=center>번호</p>
         </td>
@@ -46,7 +48,7 @@
 </table>
 
 
-<table class="sub_table" cellspacing=0 width=700 >
+<table cellspacing=0 width=700 border=1 >
     <tr>
         <td>
         {% for page in totalPageList %}
@@ -79,3 +81,5 @@
         </td>
     </tr>
 </table>
+</center>
+</body>
