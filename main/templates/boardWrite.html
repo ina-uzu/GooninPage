@@ -10,24 +10,11 @@
 
 <form method="post" action="/add/">
 	{% csrf_token %}
+	<p><label for="name">키미노나마에와</label><input type ="text" id="naem" name="name" value=""/></p>
 	<p><label for="title">제목</label><input type="text" id="title" name="title" value="" /></p>
 	<p><textarea id="contents" name="contents"></textarea></p>
 	<p><input type="submit" value="등록쟝구" /></p>
 </form>
 
-<!--
-<body>
-<center> Hello, '{{ name }}' </center>
-  <table width=700>
-      <tr>
-          <td>
-              <form name=Myname method=post action="/searchWithSubject/"></form>
-              <p align=right><input type=text name=searchStr size=50  maxlength=50>
-              <input class="MyButton" type=button value="우주글찾기"></p>
-          </td>
-      </tr>
-  </table>
-</body>
--->
 
 </html>
