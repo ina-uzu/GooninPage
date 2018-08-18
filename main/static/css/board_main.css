@@ -4,6 +4,7 @@ a {color: #555555;}
 a:hover {color: #FFBBA5;}
 
 h1{
+    text-align: center;
     background-color:#FFBBA5;
     color:#FFFFFF;
 }
