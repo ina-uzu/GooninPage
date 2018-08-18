@@ -1,8 +1,7 @@
 @charset "utf-8"
 
-a:hover{
-color: #FFAAA6;
-}
+a {color: #555555;}
+a:hover {color: #FFAAA6;}
 
 h1{
     text-align: center;
@@ -12,11 +11,18 @@ h1{
 }
 
 .main_table{
+  background-color: #FFEEEE;
   border-radius: 10px;
-  border: 1px solid #FFF;
+  border: 1px solid #FFAAA6;
 }
 
-input.MyButton {
+.sub_table{
+  background-color: #FFEEEE;
+  border-radius: 10px;
+  border: 1px solid #FFAAA6;
+}
+
+.MyButton {
   width: 100px;
   padding: 20px;
   cursor: pointer;
@@ -28,7 +34,7 @@ input.MyButton {
   border-radius: 10px;
 }
 
-input.MyButton:hover {
+.MyButton:hover {
   color: #FFF;
   background: #ACE7FF;
   border: 1px solid #fff;
