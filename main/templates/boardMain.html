@@ -34,8 +34,7 @@
             <td width=100><p align=center>{{ boardRow.name }}</p></td>
             <td width=320>
                 <p align=center>
-                    <a href="{% url 'show_read_form' pk=boardRow.pk %}">{{ boardRow.subject }}</a>
-                    <a href="/viewWork?memo_id={{ boardRow.id }}&current_page={{ current_page }}&searchStr=None" title="{{ boardRow.subject}}">{{ boardRow.subject }}</a>
+                    <a href="window.location='/{{ boardRow.pk }}'">{{ boardRow.subject }}</a>
                 </p>
             </td>
             <td width=100><p align=center>{{ boardRow.created_date }}</p></td>
@@ -53,7 +52,7 @@
     <tr>
         <td>
         {% for page in totalPageList %}
-            <a href="window.location='/pk'" ></a>
+            <a href="/listSpecificPageWork?current_page={{page}}" ></a>
             [
             {% ifequal page current_page %}
                 <b>
