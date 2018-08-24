@@ -96,3 +96,11 @@ def show_read_form(request, pk):
     return render(request, 'boardRead.html', {
         'post': post
     })
+
+
+def show_schd(request):
+    return render(request, 'schdMain.html')
+
+
+def show_letters(request):
+    return render(request, 'letterMain.html')

@@ -13,4 +13,9 @@ urlpatterns = [
 
     #Board read
     url(r'^board/(?P<pk>\d+)/', views.show_read_form),
-] 
+
+    url(r'^schedule/', views.show_schd),
+
+    url(r'^letters/', views.show_letters),
+
+]
