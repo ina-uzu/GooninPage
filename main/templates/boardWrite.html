@@ -2,6 +2,8 @@
 <!DOCTYPE html>
 
 <html lang="ko">
+
+<br/> <br/><br/>
 <head>
   <meta charset="utf-8" />
   <link rel= "stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
@@ -9,6 +11,7 @@
   <title>Uzu_write</title>
 </head>
 
+<br/> <br/>
 <form method="post" action="/add/">
 	{% csrf_token %}
 	<p><label for="name">키미노나마에와</label><input type ="text" id="naem" name="name" value=""/></p>

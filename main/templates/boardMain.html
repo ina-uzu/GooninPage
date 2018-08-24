@@ -1,10 +1,13 @@
 {% load static %}
+<br/> <br/><br/>
+
 <head>
     <title>Uzu_InaJJang - uzuBoard</title>
     <link rel="stylesheet" href="{% static 'css/board.css' %}" type = "text/css">
     <h1>우주 재밌고 슬프고 웃기고 감동적인 이야기가 넘치는 우주게시판</h1>
 </head>
 
+<br/> <br/><br/>
 <body>
 <center>
 <table cellspacing=0 width=700 border=0>
@@ -35,7 +38,7 @@
             <td width=100><p align=center>{{ boardRow.name }}</p></td>
             <td width=320>
                 <p align=center>
-                    <a href="http://34.220.143.60:8000/board-read/{{ boardRow.pk }}/">{{ boardRow.subject }}</a>
+                    <a onclick="window.location='/board-read/{{ boardRow.pk}}'" >{{ boardRow.subject }}</a>
                 </p>
             </td>
             <td width=100><p align=center>{{ boardRow.created_date }}</p></td>
@@ -69,10 +72,12 @@
     </tr>
 </table>
 
+
+<br/> <br/>
 <table width=700>
     <tr>
         <td>
-            <input class="MyButton" type=button value="우주글쓰기"  OnClick="window.location.href='http://34.220.143.60:8000/board-write/'" >
+            <input class="MyButton" type=button value="우주글쓰기" onclick="window.location='/board-write/'" >
         </td>
 
         <td>
