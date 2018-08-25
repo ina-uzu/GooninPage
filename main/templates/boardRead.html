@@ -1,11 +1,11 @@
 <!DOCTYPE html>
+{% load static %}
 
 <html lang="ko">
-
-<br/> <br/><br/>
+<br/>
 <head>
   <meta charset="utf-8" />
-  <link rel= "stylesheet" type="text/css" href="/static/css/board.css" />
+  <link rel= "stylesheet" type="text/css" href= "{% static 'css/board.css' %}" />
   <h1> {{ post.subject }} </h1>
   <title>Uzu_write</title>
 </head>
