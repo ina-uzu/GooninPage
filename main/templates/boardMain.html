@@ -1,32 +1,33 @@
-<br/><br/><br/>
-{% load static %}
 
+{% load static %}
+<!DOCTYPE html>
+
+<br/><br/>
 <head>
     <title>Uzu_Board</title>
     <h1>우주 재밌고 슬프고 웃기고 감동적인 이야기가 넘치는 우주게시판</h1>
-    <link rel="stylesheet" href="{% static 'board.css' %}" type = "text/css">
+    <link rel="stylesheet" href="/static/css/board.css" type = "text/css">
 </head>
+<br/>
 
-<br/> <br/>
-<body>
-<center>
+<body><center>
+
 <table cellspacing=0 width=700 border=0>
     <tr>
-        <td>총 게시물이 몇개야!? {{ totalCnt }}</td>
-        <td><p align=right> 현재쟝구 페이지는 {{ current_page }}
-        </td>
+        <td align="center">총 게시물이 몇개야!? {{ totalCnt }}</td>
+        <td align="center">현재쟝구 페이지는 {{ current_page }}</td>
     </tr>
 </table>
 
 <table class="main_table" cellspacing=0 width=700 >
     <tr>
-        <td width=50><p align=center>번호</p>
+        <td width=50><p align=center class = "TextTitle" >번호</p>
         </td>
-        <td width=100><p align=center>이름</p>
+        <td width=100><p align=center class = "TextTitle" >이름</p>
         </td>
-        <td width=320><p align=center>제목쟝구</p>
+        <td width=320><p align=center class = "TextTitle" >제목쟝구</p>
         </td>
-        <td width=100><p align=center>등록일</p>
+        <td width=100><p align=center class = "TextTitle" >등록일</p>
         </td>
     </tr>
 
@@ -72,20 +73,14 @@
     </tr>
 </table>
 
+<br/>
 
-<br/> <br/>
 <table width=700>
     <tr>
-        <td>
+        <td align="center">
             <input class="MyButton" type=button value="우주글쓰기" onclick="window.location='/board-write/'" >
-        </td>
-
-        <td>
-            <form name=searchf method=post action="/searchWithSubject/"></form>
-            <p align=right><input type=text name=searchStr size=50  maxlength=50>
-            <input class="MyButton" type=button value="우주글찾기"></p>
         </td>
     </tr>
 </table>
-</center>
-</body>
+
+</center></body>

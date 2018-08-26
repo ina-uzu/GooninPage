@@ -1,25 +1,44 @@
-{% load static %}
 <!DOCTYPE html>
 
 <html lang="ko">
-{% load static %}
-
-<br/>
+<br/><br/>
 <head>
   <meta charset="utf-8" />
-  <link rel= "stylesheet" type="text/css" href="{% static 'css/main.css' %}" />
+  <link rel= "stylesheet" type="text/css" href="/static/css/board.css" />
   <h1>나는야 작가고 시인이고 멋쟁이</h1>
   <title>Uzu_write</title>
 </head>
 
-<br/> <br/>
-<form method="post" action="/add/">
-	{% csrf_token %}
-	<p><label for="name">키미노나마에와</label><input type ="text" id="naem" name="name" value=""/></p>
-	<p><label for="title">제목</label><input type="text" id="title" name="title" value="" /></p>
-	<p><textarea id="contents" name="contents"></textarea></p>
-	<p><input type="submit" value="등록쟝구" /></p>
-</form>
+</br></br></br>
+<center>
+  <form method="post" action="/add/">
+    {% csrf_token %}
+    <table class="main_table" width=800>
+      <tr>
+        <td><p>이름은요?</p></td>
+        <td>
+          <input width="500" type ="text" id="name" name="name" value=""/>
+        </td>
+      </tr>
+
+      <tr>
+        <td><p>제목은요?</p></td>
+        <td>
+          <input width="500" type ="text" id="title" name="title" value=""/>
+        </td>
+      </tr>
+
+      <tr>
+        <td><p>내용은요?</p></td>
+        <td>
+          <textarea width="500" id="contents" name="contents"></textarea>
+        </td>
+      </tr>
+    </table>
+  </br></br></br>
+	<p><input class =MyButton type="submit" value="등록쟝구" /></p>
+  </form>
+</center>
 
 
 </html>

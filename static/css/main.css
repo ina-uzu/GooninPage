@@ -25,7 +25,6 @@ input.MyButton {
   width: 300px;
   padding: 20px;
   cursor: pointer;
-  text-align: center;
   font-weight: bold;
   font-size: 150%;
   background:  #00A86B;
