@@ -4,6 +4,7 @@ from __future__ import unicode_literals
 from django.utils import timezone
 from django.db import models
 
+
 # Create your models here.
 
 class DjangoBoard(models.Model):
@@ -12,3 +13,9 @@ class DjangoBoard(models.Model):
     created_date = models.DateField(default=timezone.now)
     contents = models.CharField(max_length=500, blank=True)
 
+
+class Letters(models.Model):
+    sender = models.CharField(max_length=50)
+    receiver = models.CharField(max_length=50)
+    created_date = models.DateField(default=timezone.now)
+    contents = models.CharField(max_length=50)

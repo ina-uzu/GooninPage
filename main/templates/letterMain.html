@@ -1,13 +1,86 @@
+
+{% load static %}
 <!DOCTYPE html>
 
-<html lang="en">
+<br/><br/>
 <head>
-    <meta charset="UTF-8">
-    <title>Uzu_Letters</title>
-     <link rel="stylesheet" href="/static/css/board.css" type = "text/css">
-    <h1>우주 너에게 편지를 쓴다! (욕도 가능) </h1>
+    <title>Uzu_Board</title>
+    <h1>우주 재밌고 슬프고 웃기고 감동적인 이야기가 넘치는 우주게시판</h1>
+    <link rel="stylesheet" href="/static/css/board.css" type = "text/css">
 </head>
-<body>
+<br/>
 
-</body>
-</html>
+<body><center>
+
+<table cellspacing=0 width=700 border=0>
+    <tr>
+        <td align="center">총 게시물이 몇개야!? {{ totalCnt }}</td>
+        <td align="center">현재쟝구 페이지는 {{ current_page }}</td>
+    </tr>
+</table>
+
+<table class="main_table" cellspacing=0 width=700 >
+    <tr>
+        <td width=50><p align=center class = "TextTitle" >번호</p>
+        </td>
+        <td width=100><p align=center class = "TextTitle" >이름</p>
+        </td>
+        <td width=320><p align=center class = "TextTitle" >제목쟝구</p>
+        </td>
+        <td width=100><p align=center class = "TextTitle" >등록일</p>
+        </td>
+    </tr>
+
+    {% if boardList %}
+        <ul>
+            {% for boardRow in boardList %}
+            <tr>
+            <td width=50><p align=center>{{ boardRow.id }}</p></td>
+            <td width=100><p align=center>{{ boardRow.name }}</p></td>
+            <td width=320>
+                <p align=center>
+                    <a onclick="window.location='/board-read/{{ boardRow.pk}}'" >{{ boardRow.subject }}</a>
+                </p>
+            </td>
+            <td width=100><p align=center>{{ boardRow.created_date }}</p></td>
+            </tr>
+            {% endfor %}
+        </ul>
+    {% else %}
+
+        <p>No Data.</p>
+    {% endif %}
+</table>
+
+
+<table cellspacing=0 width=700 border=0 >
+    <tr>
+        <td>
+        {% for page in totalPageList %}
+            <a href="/listSpecificPageWork?current_page={{page}}" ></a>
+            [
+            {% ifequal page current_page %}
+                <b>
+            {% endifequal %}
+            {{page}}
+
+            {% ifequal page current_page  %}
+                </b>
+            {% endifequal %}
+            ]
+        {% endfor %}
+        </td>
+    </tr>
+</table>
+
+<br/>
+
+<table width=700>
+    <tr>
+        <td align="center">
+            <input class="MyButton" type=button value="우주편지쓰기" onclick="window.location='/letter_write/'" >
+        </td>
+    </tr>
+</table>
+
+</center></body>

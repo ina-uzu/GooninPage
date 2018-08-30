@@ -6,7 +6,7 @@ from django.http import HttpResponse
 from django.template import Context
 from django.template.loader import get_template
 from django.views.decorators.csrf import csrf_exempt
-from main.models import DjangoBoard
+from main.models import DjangoBoard, Letters
 
 
 def index(request):
@@ -57,7 +57,7 @@ def show_write_form(request):
 
 
 def add_post(request):
-    if not request.POST.has_key('name'):
+    if 'name' not in request.POST:
         return HttpResponse('당신은 외계인인가요! 이름이 뭐에요!')
     else:
         if len(request.POST['name']) == 0:
@@ -65,7 +65,7 @@ def add_post(request):
         else:
             entry_name = request.POST['name']
 
-    if not request.POST.has_key('title'):
+    if 'title' not in request.POST:
         return HttpResponse('제목이 울고 있어요! 만들어주세요!')
     else:
         if len(request.POST['title']) == 0:
@@ -73,7 +73,7 @@ def add_post(request):
         else:
             entry_title = request.POST['title']
 
-    if not request.POST.has_key('contents'):
+    if 'contents' not in request.POST:
         return HttpResponse('내용이 울고 있어요! 만들어주세요!')
     else:
         if len(request.POST['contents']) == 0:
@@ -103,4 +103,39 @@ def show_schd(request):
 
 
 def show_letters(request):
-    return render(request, 'letterMain.html')
+    return render(request, 'letterWrite.html')
+
+
+def send_letters(request):
+    if 'sender' not in request.POST:
+        return HttpResponse('보내는 사람은 외계인인가요! 이름이 뭐에요!')
+    else:
+        if len(request.POST['sender']) == 0:
+            return HttpResponse('보내는 사람이 null이신가요 그치만 그건 별로!')
+        else:
+            entry_sender = request.POST['sender']
+
+    if 'receiver' not in request.POST:
+        return HttpResponse('받는 사람은 외계인인가요! 이름이 뭐에요!')
+    else:
+        if len(request.POST['receiver']) == 0:
+            return HttpResponse('받는 사람이 null이신가요 그치만 그건 별로!')
+        else:
+            entry_receiver = request.POST['receiver']
+
+    if 'contents' not in request.POST:
+        return HttpResponse('우표값이 아까워요! 내용을 적어주세요!')
+    else:
+        if len(request.POST['contents']) == 0:
+            return HttpResponse('우표값이 아까워요! 내용을 적어주세요!')
+        else:
+            entry_contents = request.POST['contents']
+
+    new_entry = Letters(sender=entry_sender, receiver=entry_sender, contents=entry_contents)
+
+    try:
+        new_entry.save()
+    except:
+        return HttpResponse('미안합니다 데헤헤 편지가 안 보내질 것 같습니다!')
+
+    return HttpResponse('고생하셨습니다! 편지가 보내졌어요! 뚜따띠!')

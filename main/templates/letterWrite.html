@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<br><br>
+<head>
+    <meta charset="UTF-8">
+    <title>Uzu_Letters</title>
+     <link rel="stylesheet" href="/static/css/board.css" type = "text/css">
+    <h1>당신께 우주 편지를 쓴다! (욕도 가능) </h1>
+</head>
+
+<body>
+<br><br>
+<center>
+  <form method="post" action="/send/">
+    {% csrf_token %}
+    <table class="main_table" width=800>
+      <tr>
+        <td><p>보내는 사람</p></td>
+        <td align="center">
+          <input style="width:500px" type ="text" id="sender" name="sender" value=""/>
+        </td>
+      </tr>
+
+      <tr>
+        <td><p>받는 사람</p></td>
+        <td align="center">
+          <input style="width:500px" type ="text" id="receiver" name="receiver" value=""/>
+        </td>
+      </tr>
+
+      <tr>
+        <td><p>감동 내용</p></td>
+        <td align="center">
+          <textarea style="width:500px; height:200px" id="contents" name="contents">
+          </textarea>
+        </td>
+      </tr>
+    </table>
+  </br></br></br>
+	<p><input class =MyButton type="submit" value="편지를 보내요!" /></p>
+  </form>
+</center>
+
+
+</body>
+</html>
