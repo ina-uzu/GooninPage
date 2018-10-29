@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-
+from django import forms
+from django.contrib.auth.models import User
 from django.utils import timezone
 from django.db import models
 
@@ -19,3 +20,9 @@ class Letters(models.Model):
     receiver = models.CharField(max_length=50)
     created_date = models.DateField(default=timezone.now)
     contents = models.CharField(max_length=50)
+
+
+class User(forms.ModelForm):
+    class Meta:
+        model = User
+        fields = ['username', 'password']

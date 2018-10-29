@@ -5,6 +5,10 @@ from . import views
 
 urlpatterns = [
     url(r'^$', views.index, name='index'),
+
+    #Sign Up
+    url(r'^join/$', views.signup, name='signup'),
+
     #Board-list
     url(r'^board/', views.show_post_list),
 
