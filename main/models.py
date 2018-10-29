@@ -20,9 +20,3 @@ class Letters(models.Model):
     receiver = models.CharField(max_length=50)
     created_date = models.DateField(default=timezone.now)
     contents = models.CharField(max_length=50)
-
-
-class User(forms.ModelForm):
-    class Meta:
-        model = User
-        fields = ['username', 'password']

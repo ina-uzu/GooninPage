@@ -7,7 +7,10 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
 
     #Sign Up
-    url(r'^join/$', views.signup, name='signup'),
+    url(r'^join/$', views.signup, name='join'),
+
+    #Sign in
+    url(r'^login/$', views.signin, name ='login'),
 
     #Board-list
     url(r'^board/', views.show_post_list),
