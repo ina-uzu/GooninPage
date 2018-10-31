@@ -1,17 +1,31 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
+<br/><br/>
 <head>
-    <meta charset="UTF-8">
-    <title>sing up</title>
+  <meta charset="utf-8" />
+  <link rel= "stylesheet" href= "/static/css/main.css/" />
+  <h1>룰루랄라 멋진 구닌 페이지</h1>
+  <title> 구닌 페이지 - 가입 </title>
 </head>
+
+<br/> <br/>
 <body>
+  <p>안녕하세요 푸드득 구닌페이지 입니다<br/>
+      가입을 우주 환영해요!<br/>
+  </p>
+<br/> <br/>
+  <center>
     {% block content %}
-    <h2>Sign up</h2>
+    <h1>원하는 아이디와 비밀번호를 입력해주세요</h1>
     <form method="post">
         {% csrf_token %}
         {{ form.as_p }}
-        <button type="submit">Sign up</button>
+        <input class ="MyButton" type="submit" value="가입하기"></input>
     </form>
     {% endblock %}
+  </center>
 </body>
 </html>
+
+
+

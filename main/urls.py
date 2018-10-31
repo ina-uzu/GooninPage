@@ -4,13 +4,14 @@ from main.views import add_post
 from . import views
 
 urlpatterns = [
-    url(r'^$', views.index, name='index'),
+    # Sign in
+    url(r'^$', views.signin, name='login'),
 
     #Sign Up
     url(r'^join/$', views.signup, name='join'),
 
-    #Sign in
-    url(r'^login/$', views.signin, name ='login'),
+    #main
+    url(r'^main$', views.index, name='index'),
 
     #Board-list
     url(r'^board/', views.show_post_list),

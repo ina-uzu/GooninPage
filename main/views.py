@@ -20,10 +20,13 @@ def index(request):
 def signup(request):
     if request.method == "POST":
         form = UserForm(request.POST)
+
         if form.is_valid():
             new_user = User.objects.create_user(**form.cleaned_data)
             login(request, new_user)
             return redirect('index')
+        else:
+            return redirect('join')
     else:
         form = UserForm()
         return render(request, 'join.html', {'form': form})
@@ -39,8 +42,9 @@ def signin(request):
         if user is not None:
             login(request, user)
             return redirect('index')
+
         else:
-            return HttpResponse('로그인 실패. 다시 시도 해보세요.')
+            return HttpResponse('로그인 실패. 다시 시도 해보세요:(')
     else:
         form = LoginForm()
         return render(request, 'login.html', {'form': form})

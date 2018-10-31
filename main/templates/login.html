@@ -1,15 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html lang="ko">
+<br/><br/>
 <head>
-    <meta charset="UTF-8">
-    <title>Login</title>
+  <meta charset="utf-8" />
+  <link rel= "stylesheet" href= "/static/css/main.css/" />
+  <h1>룰루랄라 멋진 구닌 페이지</h1>
+  <title> 구닌 페이지 - 로그인 </title>
 </head>
+
+<br/> <br/>
 <body>
-    <h2>로그인</h2>
-    <form method="post" action="">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <input type="submit" value="로그인" />
-    </form>
+  <p>안녕하세요 푸드득 구닌페이지 입니다<br/>
+      여러분은 푸드득인가요? <br/>
+  </p>
+<br/> <br/>
+  <center>
+      <form method="post" action="">
+          {% csrf_token %}
+          {{ form.as_p }}
+          <input class="MyButton" type="submit" value="들어갈래요"/>
+      </form>
+
+      <br/>
+      <input class="MyButton" type = "button" value="가입할래요" onclick="window.location='/join/'"/>
+  </center>
 </body>
 </html>
+
+
+
